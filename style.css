@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1{
+    text-decoration: underline;
+}
+
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table.dataTable thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.dataTable thead th {
+    padding: 10px;
+}
+
+table.dataTable tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table.dataTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table.dataTable tbody td {
+    padding: 8px;
+    text-align: center;
+}
+
+.column-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.column-toggle label {
+    margin-right: 10px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter-container select,
+.filter-container input {
+    margin-right: 10px; 
+    width: 100px;
+    height: 28px;
+}
+
+#criteria, #condition, #unit{
+    width: 8vw;
+}
+
+#applyFilter{
+    width: 100px;
+    height: 28px;
+    /* border: none; */
+}
+
+i{
+    cursor: pointer;
+}
