@@ -30,7 +30,7 @@ $(function() {
         });
 
         function applyFilters() {
-            $.fn.dataTable.ext.search.length = 0; // Clear previous filters
+            $.fn.dataTable.ext.search.length = 0;
 
             $('.filter-container').each(function() {
                 var criteria = $(this).find('#criteria').val();
@@ -38,10 +38,8 @@ $(function() {
                 var value = parseFloat($(this).find('#value').val()) || 0;
                 var unit = parseFloat($(this).find('#unit').val()) || 1;
 
-                // Adjust value according to the selected unit
                 value *= unit;
 
-                // Mapping of criteria to column index
                 var criteriaMapping = {
                     'revenue': 4,
                     'gp': 5,
@@ -51,7 +49,6 @@ $(function() {
 
                 var columnIndex = criteriaMapping[criteria];
 
-                // Custom filter function
                 $.fn.dataTable.ext.search.push(function(settings, data) {
                     var columnValue = parseFloat(data[columnIndex]) || 0;
 
@@ -66,7 +63,6 @@ $(function() {
                 });
             });
 
-            // Redraw the table with the new filters applied
             table.draw();
         }
 
@@ -105,7 +101,7 @@ $(function() {
 
         $(document).on('click', '.remove-content', function() {
             $(this).closest('.filter-container').remove();
-            applyFilters(); // Reapply filters after removal
+            applyFilters();
         });
     });
 });

@@ -18,7 +18,6 @@ document.getElementById('convertButton').addEventListener('click', function() {
 
         const json = JSON.stringify(results.data, null, 2);
         
-        // Create a Blob from the JSON string and save it
         const blob = new Blob([json], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
